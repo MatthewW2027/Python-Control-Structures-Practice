@@ -24,13 +24,23 @@ How to use this file:
 #   60 to 69    -> "D"
 #   below 60    -> "F"
 def grade_letter(score):
-    pass
+    if score >= 90: 
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70: 
+        return "C"
+    elif score >= 60: 
+        return "D" 
+    else: 
+        return "F"
 
 
 # Exercise 1.2
 # Conceptual question: In grade_letter, what would go wrong if you checked
 # "score >= 60" first instead of "score >= 90"? Write your answer below.
-# Your answer:
+# Your answer: it will always print the return statment associated with the if statment beucase order matters 
+#We need the order to reduce the amount of possibillities with each statement 
 
 
 # Exercise 1.3
@@ -39,6 +49,7 @@ def grade_letter(score):
 # Rule: do NOT use == with an empty list. Use truthiness with "not".
 def is_empty(items):
     pass
+
 
 
 # Exercise 1.4
@@ -60,7 +71,10 @@ def describe_number(n):
 # the numbers from n down to 1, one per line, then prints "Liftoff!".
 # Use a while loop and make sure you update your counter so the loop ends.
 def countdown(n):
-    pass
+    while n > 0: 
+            print(n)
+            n = n-1 
+    print("Liftoff")
 
 
 # Exercise 2.2
@@ -209,10 +223,10 @@ def fizzbuzz(n):
 # =====================================================================
 
 if __name__ == "__main__":
-    # print(grade_letter(85))            # Expected: B
+    #print(grade_letter(85))            # Expected: B
     # print(is_empty([]))                # Expected: True
     # print(describe_number(-4))         # Expected: negative
-    # countdown(3)                       # Expected: 3, 2, 1, Liftoff!
+    countdown(3)                       # Expected: 3, 2, 1, Liftoff!
     # print(total_until_negative([4, 5, -1, 10]))   # Expected: 9
     # print(even_numbers(6))             # Expected: [0, 2, 4, 6]
     # print_multiples_of_three()         # Expected: 3, 6, 9, ... 30
